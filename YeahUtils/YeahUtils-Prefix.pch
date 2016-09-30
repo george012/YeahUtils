@@ -1,0 +1,18 @@
+//
+//  ZXPOSKit-Prefix.pch
+//  ZXPOSKit
+//
+//  Created by 高文明 on 15/5/17.
+//  Copyright (c) 2015年 北京小禾科技有限公司. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "WMFunctionExpand.h"
+
+
+#endif
