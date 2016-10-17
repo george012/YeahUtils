@@ -7,7 +7,7 @@
 //
 
 #import "YeahUtils.h"
-#import <Foundation/Foundation.h>
+
 #define kSelf_BundleVersion          @"1.0.1"
 
 @implementation YeahUtils

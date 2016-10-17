@@ -22,7 +22,6 @@ typedef void(^WM_Util_handleBlcok_Complate)(BOOL complate, NSError *error);
 /*!
  *  带自定义参数的Block处理
  *
- *  @param complate 完成了标识
  *  @param Response Block传递参数
  *  @param error    错误信息
  */
