@@ -46,6 +46,8 @@
 		6BA427F51D9E19550087208C /* YeahUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA427F41D9E19550087208C /* YeahUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC1ACAB1DB4DA240030686A /* WMScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC1ACA91DB4DA240030686A /* WMScanner.h */; };
 		6BC1ACAC1DB4DA240030686A /* WMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1ACAA1DB4DA240030686A /* WMScanner.m */; };
+		6BC1ACBA1DB5C3FB0030686A /* WM_App_Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1ACB81DB5C3FB0030686A /* WM_App_Logo@2x.png */; };
+		6BC1ACBB1DB5C3FB0030686A /* WM_App_Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1ACB91DB5C3FB0030686A /* WM_App_Logo@3x.png */; };
 		6BE948F81DACDCFC0080EE1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948F71DACDCFC0080EE1E /* main.m */; };
 		6BE948FB1DACDCFC0080EE1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948FA1DACDCFC0080EE1E /* AppDelegate.m */; };
 		6BE948FE1DACDCFD0080EE1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948FD1DACDCFD0080EE1E /* ViewController.m */; };
@@ -83,6 +85,10 @@
 		6BA427F41D9E19550087208C /* YeahUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YeahUtils.h; sourceTree = "<group>"; };
 		6BC1ACA91DB4DA240030686A /* WMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScanner.h; sourceTree = "<group>"; };
 		6BC1ACAA1DB4DA240030686A /* WMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScanner.m; sourceTree = "<group>"; };
+		6BC1ACB11DB5C0580030686A /* YeahUtilsSource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YeahUtilsSource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC1ACB31DB5C0580030686A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC1ACB81DB5C3FB0030686A /* WM_App_Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WM_App_Logo@2x.png"; sourceTree = "<group>"; };
+		6BC1ACB91DB5C3FB0030686A /* WM_App_Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WM_App_Logo@3x.png"; sourceTree = "<group>"; };
 		6BE948F41DACDCFC0080EE1E /* YeahUtilsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeahUtilsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE948F71DACDCFC0080EE1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BE948F91DACDCFC0080EE1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +109,13 @@
 			files = (
 				6BA427F31D9E16DC0087208C /* UIKit.framework in Frameworks */,
 				6BA427F11D9E16D70087208C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC1ACAE1DB5C0580030686A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +160,7 @@
 			children = (
 				6BE948F51DACDCFC0080EE1E /* YeahUtilsExample */,
 				6BA427CD1D9D23BC0087208C /* YeahUtils */,
+				6BC1ACB21DB5C0580030686A /* YeahUtilsSource */,
 				6BA427E11D9D26330087208C /* Frameworks */,
 				6BA427CC1D9D23BC0087208C /* Products */,
 			);
@@ -157,6 +171,7 @@
 			children = (
 				6BA427CB1D9D23BC0087208C /* YeahUtils.framework */,
 				6BE948F41DACDCFC0080EE1E /* YeahUtilsExample.app */,
+				6BC1ACB11DB5C0580030686A /* YeahUtilsSource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +237,24 @@
 			);
 			name = WMScanner;
 			path = WMScaner;
+			sourceTree = "<group>";
+		};
+		6BC1ACB21DB5C0580030686A /* YeahUtilsSource */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1ACB31DB5C0580030686A /* Info.plist */,
+				6BC1ACB71DB5C3FB0030686A /* imgs */,
+			);
+			path = YeahUtilsSource;
+			sourceTree = "<group>";
+		};
+		6BC1ACB71DB5C3FB0030686A /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1ACB81DB5C3FB0030686A /* WM_App_Logo@2x.png */,
+				6BC1ACB91DB5C3FB0030686A /* WM_App_Logo@3x.png */,
+			);
+			path = imgs;
 			sourceTree = "<group>";
 		};
 		6BE948F51DACDCFC0080EE1E /* YeahUtilsExample */ = {
@@ -296,6 +329,23 @@
 			productReference = 6BA427CB1D9D23BC0087208C /* YeahUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6BC1ACB01DB5C0580030686A /* YeahUtilsSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC1ACB61DB5C0580030686A /* Build configuration list for PBXNativeTarget "YeahUtilsSource" */;
+			buildPhases = (
+				6BC1ACAD1DB5C0580030686A /* Sources */,
+				6BC1ACAE1DB5C0580030686A /* Frameworks */,
+				6BC1ACAF1DB5C0580030686A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YeahUtilsSource;
+			productName = YeahUtilsSource;
+			productReference = 6BC1ACB11DB5C0580030686A /* YeahUtilsSource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		6BE948F31DACDCFC0080EE1E /* YeahUtilsExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BE9490D1DACDCFD0080EE1E /* Build configuration list for PBXNativeTarget "YeahUtilsExample" */;
@@ -332,6 +382,10 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					6BC1ACB01DB5C0580030686A = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					6BE948F31DACDCFC0080EE1E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CN5CMKGR45;
@@ -355,6 +409,7 @@
 				6BA427CA1D9D23BC0087208C /* YeahUtils */,
 				6BA427DA1D9D24B10087208C /* MergePlugin */,
 				6BE948F31DACDCFC0080EE1E /* YeahUtilsExample */,
+				6BC1ACB01DB5C0580030686A /* YeahUtilsSource */,
 			);
 		};
 /* End PBXProject section */
@@ -364,6 +419,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC1ACAF1DB5C0580030686A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC1ACBB1DB5C3FB0030686A /* WM_App_Logo@3x.png in Resources */,
+				6BC1ACBA1DB5C3FB0030686A /* WM_App_Logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n\nopen \"${INSTALL_DIR}\"";
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n#\t打包资源Bundle\nFMK_Source_NAME=${PROJECT_NAME}\"Source\"\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\nFMK_Source_DIR=${WRK_DIR}/Release-iphoneos/${FMK_Source_NAME}.bundle/\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n#\t使用xcodebuild 打包Bundle\nxcodebuild -configuration \"Release\" -target \"${FMK_Source_NAME}\" -sdk iphoneos clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\ncp -R \"${FMK_Source_DIR}\" \"./\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\n#rm -r \"${WRK_DIR}\"\n\nopen \"${INSTALL_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -407,6 +471,13 @@
 				6B93DCF11DAD142D00042058 /* NSDate+WMExtension.m in Sources */,
 				6BA427ED1D9D282A0087208C /* NSObject+WMExtension.m in Sources */,
 				6B40F3451DAF98F600E2E814 /* UILabel+WMExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC1ACAD1DB5C0580030686A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +672,38 @@
 			};
 			name = Release;
 		};
+		6BC1ACB41DB5C0580030686A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YeahUtilsSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wmyeah.YeahUtilsSource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6BC1ACB51DB5C0580030686A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YeahUtilsSource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wmyeah.YeahUtilsSource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		6BE9490B1DACDCFD0080EE1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,6 +780,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6BC1ACB61DB5C0580030686A /* Build configuration list for PBXNativeTarget "YeahUtilsSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC1ACB41DB5C0580030686A /* Debug */,
+				6BC1ACB51DB5C0580030686A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		6BE9490D1DACDCFD0080EE1E /* Build configuration list for PBXNativeTarget "YeahUtilsExample" */ = {
 			isa = XCConfigurationList;

@@ -9,5 +9,8 @@
 #import "WMScanner.h"
 
 @implementation WMScanner
+- (void)test
+{
 
+}
 @end

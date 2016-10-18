@@ -28,6 +28,10 @@
 
 #define wm_kSelfAppCurrentVersion_Code     [kSelfAppCurrentVersion stringByReplacingOccurrencesOfString:@"." withString:@""]
 
+
+#define wm_kYeahUtilsSourceBoundle          [kSelfAppCurrentVersion stringByReplacingOccurrencesOfString:@"." withString:@""]
+
+
 /*!
  *  Log 自定义
  */
