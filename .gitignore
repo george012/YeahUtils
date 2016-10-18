@@ -6,6 +6,7 @@
 build/
 DerivedData/
 Products/
+Libs/
 
 ## Various settings
 *.pbxuser

@@ -27,7 +27,6 @@
 		6B40F3451DAF98F600E2E814 /* UILabel+WMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F3431DAF98F600E2E814 /* UILabel+WMExtension.m */; };
 		6B40F3481DAF9AD500E2E814 /* UIView+WMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B40F3461DAF9AD500E2E814 /* UIView+WMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B40F3491DAF9AD500E2E814 /* UIView+WMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B40F3471DAF9AD500E2E814 /* UIView+WMExtension.m */; };
-		6B93DCE81DACFB3E00042058 /* YeahUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B93DCE71DACFB3E00042058 /* YeahUtils.framework */; };
 		6B93DCEA1DAD123C00042058 /* YeahUtilsExample-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6B93DCE91DAD123C00042058 /* YeahUtilsExample-Prefix.pch */; };
 		6B93DCED1DAD12D800042058 /* WMBlock_Handles.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B93DCEC1DAD12D800042058 /* WMBlock_Handles.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B93DCF01DAD142D00042058 /* NSDate+WMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B93DCEE1DAD142D00042058 /* NSDate+WMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,7 +63,6 @@
 		6B40F3431DAF98F600E2E814 /* UILabel+WMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WMExtension.m"; sourceTree = "<group>"; };
 		6B40F3461DAF9AD500E2E814 /* UIView+WMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WMExtension.h"; sourceTree = "<group>"; };
 		6B40F3471DAF9AD500E2E814 /* UIView+WMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WMExtension.m"; sourceTree = "<group>"; };
-		6B93DCE71DACFB3E00042058 /* YeahUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YeahUtils.framework; path = Products/YeahUtils.framework; sourceTree = "<group>"; };
 		6B93DCE91DAD123C00042058 /* YeahUtilsExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YeahUtilsExample-Prefix.pch"; sourceTree = "<group>"; };
 		6B93DCEC1DAD12D800042058 /* WMBlock_Handles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBlock_Handles.h; sourceTree = "<group>"; };
 		6B93DCEE1DAD142D00042058 /* NSDate+WMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WMExtension.h"; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B93DCE81DACFB3E00042058 /* YeahUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +188,6 @@
 		6BA427E11D9D26330087208C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B93DCE71DACFB3E00042058 /* YeahUtils.framework */,
 				6BA427F21D9E16DC0087208C /* UIKit.framework */,
 				6BA427F01D9E16D70087208C /* Foundation.framework */,
 			);
@@ -455,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n#\t打包资源Bundle\nFMK_Source_NAME=${PROJECT_NAME}\"Source\"\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\nFMK_Source_DIR=${WRK_DIR}/Release-iphoneos/${FMK_Source_NAME}.bundle/\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n#\t使用xcodebuild 打包Bundle\nxcodebuild -configuration \"Release\" -target \"${FMK_Source_NAME}\" -sdk iphoneos clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\ncp -R \"${FMK_Source_DIR}\" \"./\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\n#rm -r \"${WRK_DIR}\"\n\nopen \"${INSTALL_DIR}\"";
+			shellScript = "搜索 Library  设置工程模式为  Static Library\n\n# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n#    打包资源Bundle\nFMK_Source_NAME=${PROJECT_NAME}\"Source\"\n\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR_SRC=${SRCROOT}/Libs/${FMK_NAME}\nINSTALL_DIR=${INSTALL_DIR_SRC}/${FMK_NAME}.framework\n\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n\n#    Bundle文件目录\nFMK_Source_DIR=${WRK_DIR}/Release-iphoneos/${FMK_Source_NAME}.bundle\n\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n\n#    使用xcodebuild 打包Bundle\nxcodebuild -configuration \"Release\" -target \"${FMK_Source_NAME}\" -sdk iphoneos clean build\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\ncp -R \"${FMK_Source_DIR}\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nln -s ${INSTALL_DIR}/${FMK_Source_NAME}.bundle ${INSTALL_DIR_SRC}/${FMK_Source_NAME}.bundle\n\n#    清理工程\nrm -r \"${WRK_DIR}\"\nrm -r \"${INSTALL_DIR}/_CodeSignature\"\nrm -r \"${INSTALL_DIR}/Info.plist\"\nrm -r \"${INSTALL_DIR}/Modules\"\nrm -r \"${INSTALL_DIR}/${FMK_Source_NAME}.bundle/Info.plist\"\n\nopen \"${INSTALL_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -710,10 +706,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CN5CMKGR45;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Products",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "YeahUtilsExample/YeahUtilsExample-Prefix.pch";
 				INFOPLIST_FILE = YeahUtilsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -734,10 +727,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = CN5CMKGR45;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Products",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "YeahUtilsExample/YeahUtilsExample-Prefix.pch";
 				INFOPLIST_FILE = YeahUtilsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -788,6 +778,7 @@
 				6BC1ACB51DB5C0580030686A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BE9490D1DACDCFD0080EE1E /* Build configuration list for PBXNativeTarget "YeahUtilsExample" */ = {
 			isa = XCConfigurationList;
