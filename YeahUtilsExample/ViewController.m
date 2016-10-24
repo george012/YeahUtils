@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage  *pathIMG = [UIImage imageWithContentsOfFile:wm_kSource_From_YeahUtilsBundle(@"beautiful_1", @"jpg", nil)];
+    
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:pathIMG];
+    
+    [self.view addSubview:imgView];
 }
 
 

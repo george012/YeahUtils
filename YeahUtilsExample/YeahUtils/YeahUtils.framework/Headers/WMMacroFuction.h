@@ -29,9 +29,8 @@
 #define wm_kSelfAppCurrentVersion_Code     [kSelfAppCurrentVersion stringByReplacingOccurrencesOfString:@"." withString:@""]
 
 
-#define wm_kBundle_Souce_YeahUtils         [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"YeahUtilsSource" ofType:@"bundle"]]
+#define wm_kYeahUtilsSourceBoundle          [kSelfAppCurrentVersion stringByReplacingOccurrencesOfString:@"." withString:@""]
 
-#define wm_kSource_From_YeahUtilsBundle(fileName,fileType,subDirectory)         [wm_kBundle_Souce_YeahUtils pathForResource:fileName ofType:fileType inDirectory:subDirectory?subDirectory:@""]
 
 /*!
  *  Log 自定义
