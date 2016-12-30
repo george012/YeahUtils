@@ -67,11 +67,12 @@
 		6BC1ACBB1DB5C3FB0030686A /* WM_App_Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1ACB91DB5C3FB0030686A /* WM_App_Logo@3x.png */; };
 		6BE948F81DACDCFC0080EE1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948F71DACDCFC0080EE1E /* main.m */; };
 		6BE948FB1DACDCFC0080EE1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948FA1DACDCFC0080EE1E /* AppDelegate.m */; };
-		6BE948FE1DACDCFD0080EE1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948FD1DACDCFD0080EE1E /* ViewController.m */; };
+		6BE948FE1DACDCFD0080EE1E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6BE948FD1DACDCFD0080EE1E /* ViewController.mm */; };
 		6BE949011DACDCFD0080EE1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE948FF1DACDCFD0080EE1E /* Main.storyboard */; };
 		6BE949041DACDCFD0080EE1E /* YeahUtilsExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BE949021DACDCFD0080EE1E /* YeahUtilsExample.xcdatamodeld */; };
 		6BE949061DACDCFD0080EE1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949051DACDCFD0080EE1E /* Assets.xcassets */; };
 		6BE949091DACDCFD0080EE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE949071DACDCFD0080EE1E /* LaunchScreen.storyboard */; };
+		6BFF93AF1DC2022B00F6F9CE /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFF93AE1DC2022B00F6F9CE /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,12 +129,13 @@
 		6BE948F91DACDCFC0080EE1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BE948FA1DACDCFC0080EE1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BE948FC1DACDCFC0080EE1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6BE948FD1DACDCFD0080EE1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6BE948FD1DACDCFD0080EE1E /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		6BE949001DACDCFD0080EE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BE949031DACDCFD0080EE1E /* YeahUtilsExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YeahUtilsExample.xcdatamodel; sourceTree = "<group>"; };
 		6BE949051DACDCFD0080EE1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BE949081DACDCFD0080EE1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BE9490A1DACDCFD0080EE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BFF93AE1DC2022B00F6F9CE /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFF93AF1DC2022B00F6F9CE /* ExternalAccessory.framework in Frameworks */,
 				6BA427F31D9E16DC0087208C /* UIKit.framework in Frameworks */,
 				6BA427F11D9E16D70087208C /* Foundation.framework in Frameworks */,
 			);
@@ -225,6 +228,7 @@
 		6BA427E11D9D26330087208C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BFF93AE1DC2022B00F6F9CE /* ExternalAccessory.framework */,
 				6BA427F21D9E16DC0087208C /* UIKit.framework */,
 				6BA427F01D9E16D70087208C /* Foundation.framework */,
 			);
@@ -337,7 +341,7 @@
 				6BE948F91DACDCFC0080EE1E /* AppDelegate.h */,
 				6BE948FA1DACDCFC0080EE1E /* AppDelegate.m */,
 				6BE948FC1DACDCFC0080EE1E /* ViewController.h */,
-				6BE948FD1DACDCFD0080EE1E /* ViewController.m */,
+				6BE948FD1DACDCFD0080EE1E /* ViewController.mm */,
 				6BBDBDBC1DB6212400BCADCB /* Libs */,
 				6BE948F61DACDCFC0080EE1E /* Supporting Files */,
 			);
@@ -577,7 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE948FE1DACDCFD0080EE1E /* ViewController.m in Sources */,
+				6BE948FE1DACDCFD0080EE1E /* ViewController.mm in Sources */,
 				6BE949041DACDCFD0080EE1E /* YeahUtilsExample.xcdatamodeld in Sources */,
 				6BE948FB1DACDCFC0080EE1E /* AppDelegate.m in Sources */,
 				6BE948F81DACDCFC0080EE1E /* main.m in Sources */,
